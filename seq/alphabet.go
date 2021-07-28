@@ -11,26 +11,25 @@ const (
 
 type Alphabet uint16
 
-//type NucleicAcid uint16
-//type AmnioAcid Alphabet
-//type Alphabet
+type NucleicAcid Alphabet
+type AmnioAcid Alphabet
 
 const (
-	Gap Alphabet = 0
-	A   Alphabet = 1 << iota
-	C   Alphabet = 1 << iota
-	G   Alphabet = 1 << iota
-	T   Alphabet = 1 << iota
-	U   Alphabet = 1 << iota
+	Gap NucleicAcid = 0
+	A   NucleicAcid = 1 << iota
+	C   NucleicAcid = 1 << iota
+	G   NucleicAcid = 1 << iota
+	T   NucleicAcid = 1 << iota
+	U   NucleicAcid = 1 << iota
 
-	K Alphabet = A | T
-	S Alphabet = G | C
-	Y Alphabet = T | C
-	V Alphabet = A | C | G
-	H Alphabet = A | C | T
-	D Alphabet = A | G | T
-	B Alphabet = C | G | T
-	N Alphabet = A | C | G | T
+	K NucleicAcid = A | T
+	S NucleicAcid = G | C
+	Y NucleicAcid = T | C
+	V NucleicAcid = A | C | G
+	H NucleicAcid = A | C | T
+	D NucleicAcid = A | G | T
+	B NucleicAcid = C | G | T
+	N NucleicAcid = A | C | G | T
 )
 
 const (
