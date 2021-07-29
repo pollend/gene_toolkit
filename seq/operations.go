@@ -1,5 +1,25 @@
 package seq
 
+//type IGenomeSeq interface {
+//
+//}
+//
+//func (p *GenomeSeq) At(index int) NucleicAcid{
+//	return p.seq[index]
+//}
+//
+//func (p *GenomeSeq) Append(seq* GenomeSeq)  {
+//	p.Append(seq)
+//}
+//
+//func (p *GenomeSeq) Len() int  {
+//	return p.Len()
+//}
+//
+//func (p *GenomeSeq) LeftAppend(seq* GenomeSeq) {
+//	p.LAppend(seq)
+//}
+
 
 //
 //type Operations interface {
@@ -10,38 +30,38 @@ package seq
 //	slice(start int, end int) (Sequence, error);
 //}
 //
-//func (s Seq) equal(target Sequence) bool {
-//	if s.len() != target.len() {
+//func (s ISeq) equal(target Sequence) bool {
+//	if s.Len() != target.Len() {
 //		return false;
 //	}
 //	for i, val := range s.seq() {
-//		if val != target.at(i) {
+//		if val != target.At(i) {
 //			return false
 //		}
 //	}
 //	return true
 //}
 //
-//func (s Seq) multi(cnt int) Sequence {
-//	result := make([]Alphabet, 0, cnt * s.len())
+//func (s ISeq) multi(cnt int) Sequence {
+//	result := make([]Alphabet, 0, cnt * s.Len())
 //	copy(result, s.characters)
 //	for i := 0; i < cnt; i++ {
-//		result = append(result, s.characters...)
+//		result = Append(result, s.characters...)
 //	}
 //	s.characters = result
 //	return s
 //}
-//func (s Seq) add(seq Sequence) Sequence {
-//	s.characters = append(s.characters, seq.seq()...)
+//func (s ISeq) add(seq Sequence) Sequence {
+//	s.characters = Append(s.characters, seq.seq()...)
 //	return s
 //}
 //
-//func (s Seq) slice(start int, end int) (Sequence, error) {
+//func (s ISeq) slice(start int, end int) (Sequence, error) {
 //	if(start > end) {
 //		return nil, errors.New("start can't greater then end")
 //	}
-//	if start > 0 && start < s.len() && end > 0 && end < s.len() {
-//		return Seq {
+//	if start > 0 && start < s.Len() && end > 0 && end < s.Len() {
+//		return ISeq {
 //			isReference: true,
 //			seqType: s.seqType,
 //			characters: s.characters[start:end],
@@ -51,13 +71,13 @@ package seq
 //}
 //
 //
-//func (s Seq) count(target Sequence) int {
+//func (s ISeq) count(target Sequence) int {
 //	i := 0
 //	count := 0
-//	for i + target.len() < s.len(){
-//		res, _ := s.slice(i,i + target.len())
+//	for i + target.Len() < s.Len(){
+//		res, _ := s.slice(i,i + target.Len())
 //		if target.equal(res) {
-//			i += target.len()
+//			i += target.Len()
 //			count++;
 //		}
 //		i++

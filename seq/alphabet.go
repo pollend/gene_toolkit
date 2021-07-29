@@ -1,14 +1,5 @@
 package seq
 
-type SequenceType uint8
-
-const (
-	Unknown SequenceType = iota
-	DNA     SequenceType = iota
-	RNA     SequenceType = iota
-	Protein SequenceType = iota
-)
-
 type Alphabet uint16
 
 type NucleicAcid Alphabet
@@ -33,27 +24,27 @@ const (
 )
 
 const (
-	Ala Alphabet = iota
-	Asx Alphabet = iota
-	Cys Alphabet = iota
-	Asp Alphabet = iota
-	Glu Alphabet = iota
-	Phe Alphabet = iota
-	Gly Alphabet = iota
-	His Alphabet = iota
-	Ile Alphabet = iota
-	Lys Alphabet = iota
-	Leu Alphabet = iota
-	Met Alphabet = iota
-	Asn Alphabet = iota
-	Pro Alphabet = iota
-	Gln Alphabet = iota
-	Arg Alphabet = iota
-	Ser Alphabet = iota
-	Thr Alphabet = iota
-	Val Alphabet = iota
-	Trp Alphabet = iota
-	Xxx Alphabet = iota
-	Tyr Alphabet = iota
-	Glx Alphabet = iota
+	Ala AmnioAcid = iota
+	Asx AmnioAcid = iota
+	Cys AmnioAcid = iota
+	Asp AmnioAcid = iota
+	Glu AmnioAcid = iota
+	Phe AmnioAcid = iota
+	Gly AmnioAcid = iota
+	His AmnioAcid = iota
+	Ile AmnioAcid = iota
+	Lys AmnioAcid = iota
+	Leu AmnioAcid = iota
+	Met AmnioAcid = iota
+	Asn AmnioAcid = iota
+	Pro AmnioAcid = iota
+	Gln AmnioAcid = iota
+	Arg AmnioAcid = iota
+	Ser AmnioAcid = iota
+	Thr AmnioAcid = iota
+	Val AmnioAcid = iota
+	Trp AmnioAcid = iota
+	Xxx AmnioAcid = iota
+	Tyr AmnioAcid = iota
+	Glx AmnioAcid = iota
 )
